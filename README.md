@@ -1,5 +1,4 @@
-# PIXEL TRAINING
-
+# Boot Camps
 ## Sobre
 Uma breve descrição sobre o que é o projeto.
 
