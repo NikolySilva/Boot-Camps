@@ -19,10 +19,6 @@ public class GameController : MonoBehaviour
             int passos = Random.Range(1, 6);
             jogador.MoverParaFrente(passos);
         }
-        else
-        {
-
-        }
 
         ProximaPergunta();
         
