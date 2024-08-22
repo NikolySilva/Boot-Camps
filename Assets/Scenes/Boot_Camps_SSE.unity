@@ -677,7 +677,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3620,7 +3620,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4807,6 +4807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24a9ae9fbe001e40a39b3c1c6f13833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casas: []
+  velocidade: 5
 --- !u!1 &1361629918
 GameObject:
   m_ObjectHideFlags: 0
@@ -13057,12 +13059,13 @@ MonoBehaviour:
   jogador: {fileID: 1341388662}
   painel: {fileID: 573675545}
   perguntas:
-  - pergunta: pegunta 1
+  - pergunta: "Ol\xE1 pergunta 1"
     resposta: 1
   - pergunta: 
     resposta: 0
   - pergunta: 
     resposta: 0
+  textoPerg: {fileID: 0}
 --- !u!4 &2145278821
 Transform:
   m_ObjectHideFlags: 0

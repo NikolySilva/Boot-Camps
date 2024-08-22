@@ -16,8 +16,15 @@ public class GameController : MonoBehaviour
     {
         if (perguntas[indicePerg].resposta)
         {
+            int passos = Random.Range(1, 6);
+            jogador.MoverParaFrente(passos);
+        }
+        else
+        {
 
         }
+
+        ProximaPergunta();
         
     }
 
@@ -25,9 +32,24 @@ public class GameController : MonoBehaviour
     {
         if (!perguntas[indicePerg].resposta)
         {
+            jogador.MoverParaTras(1);
+        }
+        else
+        {
 
         }
+
+        ProximaPergunta();
     }
+
+    void ProximaPergunta()
+    {
+        indicePerg = (indicePerg + 1) % perguntas.Length;
+        textoPerg.text = perguntas[indicePerg].pergunta;
+    }
+
+
+
 
     // Start is called before the first frame update
     void Start()
