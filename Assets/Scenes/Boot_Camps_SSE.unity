@@ -2723,7 +2723,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Correta
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3346,7 +3348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pergunta 1
+  m_text: "Ol\xE1 pergunta 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3373,8 +3375,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4768,7 +4770,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7166236263522030466, guid: cdb0cc8ca9aac2a4d84c6aa3c1cbf52b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5346,7 +5348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Incorreta
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13016,6 +13018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   casas:
   - {fileID: 2033119222}
+  - {fileID: 1341388661}
   - {fileID: 1385995789}
   - {fileID: 348820505}
   - {fileID: 925843949}
@@ -13041,7 +13044,6 @@ MonoBehaviour:
   - {fileID: 36135611}
   - {fileID: 216778511}
   - {fileID: 479066558}
-  - {fileID: 716480208}
   - {fileID: 424451568}
   - {fileID: 620694977}
   - {fileID: 2012478474}
@@ -13056,16 +13058,21 @@ MonoBehaviour:
   - {fileID: 1831689934}
   - {fileID: 405457914}
   - {fileID: 2047636317}
-  jogador: {fileID: 1341388662}
-  painel: {fileID: 573675545}
+  - {fileID: 716480208}
+  player: {fileID: 1341388662}
+  painelPerguntas: {fileID: 573675545}
+  textoPergunta: {fileID: 753830712}
+  botao1Texto: {fileID: 416853339}
+  botao2Texto: {fileID: 1938869335}
   perguntas:
-  - pergunta: "Ol\xE1 pergunta 1"
-    resposta: 1
-  - pergunta: 
-    resposta: 0
-  - pergunta: 
-    resposta: 0
-  textoPerg: {fileID: 0}
+  - pergunta: "Ol\xE1 mundo"
+    opcao1: "ol\xE1"
+    opcao2: vsf
+    respostaCorreta: 2
+  - pergunta: fulana ou ciclana
+    opcao1: fulana
+    opcao2: ciclana
+    respostaCorreta: 2
 --- !u!4 &2145278821
 Transform:
   m_ObjectHideFlags: 0

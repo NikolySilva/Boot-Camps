@@ -7,7 +7,9 @@ using UnityEngine;
 public class Pergunta
 {
     public string pergunta;
-    public bool resposta;
+    public string opcao1;
+    public string opcao2;
+    public int respostaCorreta; // 1 para opção correta, 2 para duas opção correta
 
 
 }
