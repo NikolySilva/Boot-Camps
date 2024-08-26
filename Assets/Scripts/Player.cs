@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public Transform[] casas; //Referência as casas no tabuleiro
     private int indiceAtual = 0;
+    public Player player; //Referência ao objeto Player
     public float velocidade = 5f;
 
     public void MoverParaFrente(int passos)
@@ -18,10 +19,22 @@ public class Player : MonoBehaviour
             novoIndice = casas.Length - 1; //última casa
         }
 
+        if (novoIndice < 0)
+        {
+            novoIndice = 0;
+        }
+
         //Atualiza o índice Atual
         indiceAtual = novoIndice;
 
-        StartCoroutine(MoverSuavemente(casas[indiceAtual].position));
+        if (indiceAtual < casas.Length && indiceAtual >= 0)
+        {
+            StartCoroutine(MoverSuavemente(casas[indiceAtual].position));
+        }
+        else
+        {
+            Debug.LogError("Tentativa de acessar um índice fora dos limites: " + indiceAtual);
+        }
     }
 
     public void MoverParaTras(int passos)

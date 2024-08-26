@@ -17,8 +17,17 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        ExibirPergunta();
+        if(casas == null || casas.Length == 0)
+        {
+            Debug.Log("O array casas não foi configurado corretamente");
+        }
+        else
+        {
+            ExibirPergunta();
+        }
+        
     }
+
 
     void ExibirPergunta()
     {
