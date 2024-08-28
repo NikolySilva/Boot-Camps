@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Transform[] casas; //Referência as casas no tabuleiro
+    public GameController gameController;
+    private Transform[] casas; //Referência as casas no tabuleiro
     private int indiceAtual = 0;
     public Player player; //Referência ao objeto Player
-    public float velocidade = 5f;
+    public float velocidade;
 
+    private void Start()
+    {
+        casas = gameController.casas;
+    }
     public void MoverParaFrente(int passos)
     {
         int novoIndice = indiceAtual + passos;
+        Debug.Log(novoIndice);
 
         //Garante que o índice não ultrapasse o número de casas disponíveis
         if(novoIndice >= casas.Length)
@@ -45,6 +51,7 @@ public class Player : MonoBehaviour
         if (indiceAtual < 0)
         {
             indiceAtual = 0;
+            Debug.Log("Índice = 0");
         }
 
         StartCoroutine(MoverSuavemente(casas[indiceAtual].position));

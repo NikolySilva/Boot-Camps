@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public Pergunta[] perguntas; //Array de perguntas
     private int indicePergunta = 0;
 
-    void Start()
+    IEnumerator Start()
     {
         if(casas == null || casas.Length == 0)
         {
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            yield return new WaitForSeconds(2);
             ExibirPergunta();
         }
         
@@ -42,6 +43,10 @@ public class GameController : MonoBehaviour
     public void Opcao1()
     {
         VerificarResposta(perguntas[indicePergunta].respostaCorreta == 2);
+    }
+    public void Opcao2()
+    {
+        VerificarResposta(perguntas[indicePergunta].respostaCorreta == 1);
     }
 
     void VerificarResposta(bool correta)
@@ -74,15 +79,12 @@ public class GameController : MonoBehaviour
         {
             ProximaPergunta(); //carrega proxima pergunta
         }
-
-        void ProximaPergunta()
-        {
-            indicePergunta = (indicePergunta + 1) % perguntas.Length; //avança para a próxima pergunta
-            ExibirPergunta();
-        }
     }
-
-
+    void ProximaPergunta()
+    {
+        indicePergunta = (indicePergunta + 1) % perguntas.Length; //avança para a próxima pergunta
+        ExibirPergunta();
+    }
 
 
     /*public Transform[] casas;
