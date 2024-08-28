@@ -221,8 +221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 111.46, y: -32.00001}
+  m_SizeDelta: {x: 160, y: 78.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137325334
 MonoBehaviour:
@@ -2723,9 +2723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: Este texto tem que ser pequeno o suficiente para respostas curtas e longas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2752,13 +2750,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3173,7 +3171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.54509807, g: 0, b: 0, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3325,8 +3323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 39.3}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 4.5404, y: 46}
+  m_SizeDelta: {x: 373.8375, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753830712
 MonoBehaviour:
@@ -3348,7 +3346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: testando perguntas e respostas principalmente sendo longas assim
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3375,13 +3373,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4811,7 +4809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 2145278820}
   player: {fileID: 0}
-  velocidade: 3
+  velocidade: 2
 --- !u!1 &1361629918
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,8 +5194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -102.38, y: -32}
+  m_SizeDelta: {x: 160, y: 78.4298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881348609
 MonoBehaviour:
@@ -5350,7 +5348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Este texto tem que ser pequeno o suficiente para respostas curtas e longas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5377,13 +5375,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -13028,6 +13026,37 @@ MonoBehaviour:
   - {fileID: 1052209970}
   - {fileID: 1154131129}
   - {fileID: 759103948}
+  - {fileID: 1537786266}
+  - {fileID: 1992399049}
+  - {fileID: 846953705}
+  - {fileID: 2096185870}
+  - {fileID: 1800979355}
+  - {fileID: 148477156}
+  - {fileID: 241702303}
+  - {fileID: 1361629919}
+  - {fileID: 1732281431}
+  - {fileID: 1590366088}
+  - {fileID: 206203576}
+  - {fileID: 2138649845}
+  - {fileID: 36135611}
+  - {fileID: 216778511}
+  - {fileID: 479066558}
+  - {fileID: 716480208}
+  - {fileID: 424451568}
+  - {fileID: 620694977}
+  - {fileID: 2012478474}
+  - {fileID: 1325781572}
+  - {fileID: 173734609}
+  - {fileID: 790599704}
+  - {fileID: 524611908}
+  - {fileID: 1312914300}
+  - {fileID: 1226678180}
+  - {fileID: 119990718}
+  - {fileID: 506068920}
+  - {fileID: 1831689934}
+  - {fileID: 405457914}
+  - {fileID: 2047636317}
+  - {fileID: 2033119222}
   player: {fileID: 1341388662}
   painelPerguntas: {fileID: 573675545}
   textoPergunta: {fileID: 753830712}
