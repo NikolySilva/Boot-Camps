@@ -15,23 +15,18 @@ public class GameController : MonoBehaviour
     public Pergunta[] perguntas; //Array de perguntas
     private int indicePergunta = 0;
 
+
     IEnumerator Start()
     {
-        if(casas == null || casas.Length == 0)
-        {
-            Debug.Log("O array casas não foi configurado corretamente");
-        }
-        else
-        {
-            yield return new WaitForSeconds(2);
-            ExibirPergunta();
-        }
-        
+        yield return new WaitForSeconds(2);
+        ExibirPergunta();
     }
+
 
 
     void ExibirPergunta()
     {
+        
         //Exibe o painel de perguntas com a pergunta atual
         painelPerguntas.SetActive(true);
         Pergunta perguntaAtual = perguntas[indicePergunta];
@@ -82,60 +77,9 @@ public class GameController : MonoBehaviour
     }
     void ProximaPergunta()
     {
+
+        //linha pronta não mexa nela
         indicePergunta = (indicePergunta + 1) % perguntas.Length; //avança para a próxima pergunta
         ExibirPergunta();
     }
-
-
-    /*public Transform[] casas;
-    public Player jogador;
-    public GameObject painel;
-    public Pergunta[] perguntas;
-    public TMP_Text textoPerg;
-    private int indicePerg = 0;
-
-    public void Opcao1()
-    {
-        if (perguntas[indicePerg].resposta)
-        {
-            int passos = Random.Range(1, 6);
-            jogador.MoverParaFrente(passos);
-
-            Debug.Log("O jogador moveu " + passos + "passos");
-        }
-
-        ProximaPergunta();
-        
-    }
-
-    public void Opcao2()
-    {
-        if (!perguntas[indicePerg].resposta)
-        {
-            jogador.MoverParaTras(1);
-        }
-
-        ProximaPergunta();
-    }
-
-    void ProximaPergunta()
-    {
-        indicePerg = (indicePerg + 1) % perguntas.Length;
-        textoPerg.text = perguntas[indicePerg].pergunta;
-    }
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        textoPerg.text = perguntas[indicePerg].pergunta;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }

@@ -13034,13 +13034,57 @@ MonoBehaviour:
   botao1Texto: {fileID: 416853339}
   botao2Texto: {fileID: 1938869335}
   perguntas:
-  - pergunta: "Ol\xE1 mundo"
-    opcao1: "ol\xE1"
-    opcao2: vsf
+  - pergunta: "1- As aquisi\xE7\xF5es s\xE3o divididas em quantos tipos ?"
+    opcao1: 4 tipos
+    opcao2: 6 tipos
     respostaCorreta: 2
-  - pergunta: fulana ou ciclana
-    opcao1: fulana
-    opcao2: ciclana
+  - pergunta: "2-Quais s\xE3o os tipos de aquisi\xE7\xF5es?"
+    opcao1: "A) uso e consumo, revenda, industrializa\xE7\xE3o, servi\xE7o, imobilizado
+      e mobilizado"
+    opcao2: "B)uso e consumo, venda, comercializa\xE7\xE3o, servi\xE7o, imobilizado
+      e mobilizado. "
+    respostaCorreta: 2
+  - pergunta: "3- Qual das op\xE7\xF5es abaixo se encaixa na aquisi\xE7\xE3o de servi\xE7o:"
+    opcao1: "A) manuten\xE7\xE3o do ar da empresa"
+    opcao2: "B) compra de luvas e \xF3culos para funcion\xE1rios "
+    respostaCorreta: 2
+  - pergunta: "4- qual a defini\xE7\xE3o de fornecedores qualificados?"
+    opcao1: "A) fornecedores que passaram pelo processo de qualifica\xE7\xE3o e foram
+      aprovados"
+    opcao2: 'B)fornecedores com quem a empresa tem um relacionamento preferencial
+      devido a qualidade do fornecimento '
+    respostaCorreta: 2
+  - pergunta: "5- Uma vez selecionado um fornecedor quando n\xE3o qualificado, a
+      empresa:"
+    opcao1: "A) \xE9 avaliada de acordo com os crit\xE9rios de fornecimento estabelecidos
+      pela SSE"
+    opcao2: "B) n\xE3o busca avalia-lo por n\xE3o estar qualificado no sistema e
+      busca outro fornecedor j\xE1 qualificado"
+    respostaCorreta: 2
+  - pergunta: "6- ap\xF3s a identifica\xE7\xE3o da necessidade da compra, oque \xE9
+      considerado uma boa pr\xE1tica?"
+    opcao1: "A) or\xE7ar apenas com os fornecedores qualificados"
+    opcao2: "B) Or\xE7ar com pelo menos tr\xEAs fornecedores seja qualificado ou
+      n\xE3o"
+    respostaCorreta: 2
+  - pergunta: "7- Ap\xF3s o solicitante da compra abrir o ticket e os or\xE7amentos
+      estiverem Anexados. A quem voc\xEA deve atribuir o ticket?"
+    opcao1: A) Ao gestor financeiro
+    opcao2: B) Ao gestor do solicitante
+    respostaCorreta: 2
+  - pergunta: "8 - Ap\xF3s o gestor do solicitante aprovar o or\xE7amento voc\xEA
+      deve:"
+    opcao1: A) Notificar o CEO
+    opcao2: 'B) Atribuir para o gestor financeiro '
+    respostaCorreta: 2
+  - pergunta: "9 - no recebimento do produto quem deve fazer a valida\xE7\xE3o?"
+    opcao1: A) O gestor de service
+    opcao2: B) O solicitante do produto
+    respostaCorreta: 2
+  - pergunta: "10 - Qual a defini\xE7\xE3o do processo de mobiliza\xE7\xE3o?"
+    opcao1: "A) na aquisi\xE7\xE3o de m\xF3veis "
+    opcao2: "B) processo de integra\xE7\xE3o dos funcion\xE1rios para a presta\xE7\xE3o
+      de servi\xE7os"
     respostaCorreta: 2
 --- !u!4 &2145278821
 Transform:
