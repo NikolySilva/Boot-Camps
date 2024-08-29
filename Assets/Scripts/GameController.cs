@@ -6,15 +6,14 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public Transform[] casas; // array das casas do tabuleiro
-    public Player player; //Referência ao objeto Player
-    public GameObject painelPerguntas; //Painel de perguntas
-    public TMP_Text textoPergunta; //Texto da pergunta
-    public TMP_Text botao1Texto; //texto da opção 1
-    public TMP_Text botao2Texto; //texto da opção 2
+    public Player player; // Referência ao objeto Player
+    public GameObject painelPerguntas; // Painel de perguntas
+    public TMP_Text textoPergunta; // Texto da pergunta
+    public TMP_Text botao1Texto; // Texto da opção 1
+    public TMP_Text botao2Texto; // Texto da opção 2
 
-    public Pergunta[] perguntas; //Array de perguntas
+    public Pergunta[] perguntas; // Array de perguntas
     private int indicePergunta = 0;
-
 
     IEnumerator Start()
     {
@@ -22,12 +21,9 @@ public class GameController : MonoBehaviour
         ExibirPergunta();
     }
 
-
-
     void ExibirPergunta()
     {
-        
-        //Exibe o painel de perguntas com a pergunta atual
+        // Exibe o painel de perguntas com a pergunta atual
         painelPerguntas.SetActive(true);
         Pergunta perguntaAtual = perguntas[indicePergunta];
         textoPergunta.text = perguntaAtual.pergunta;
@@ -37,49 +33,59 @@ public class GameController : MonoBehaviour
 
     public void Opcao1()
     {
-        VerificarResposta(perguntas[indicePergunta].respostaCorreta == 2);
+        VerificarResposta(perguntas[indicePergunta].respostaCorreta == 1);
     }
     public void Opcao2()
     {
-        VerificarResposta(perguntas[indicePergunta].respostaCorreta == 1);
+        VerificarResposta(perguntas[indicePergunta].respostaCorreta == 2);
     }
 
     void VerificarResposta(bool correta)
     {
+        painelPerguntas.SetActive(false);
+
         if (correta)
         {
             int passos = Random.Range(1, 7); // Sorteia um número de 1 a 6
-            Debug.Log("O jogador anda" + passos);
-            player.MoverParaFrente(passos);
+            Debug.Log("O jogador anda " + passos);
+            StartCoroutine(MoverJogador(passos));
         }
         else
         {
-            if(player.IndiceAtual() == 0)
+            if (player.IndiceAtual() == 0)
             {
-                Debug.Log("Player está na osição inicial e não pode retroceder");
+                Debug.Log("Player está na posição inicial e não pode retroceder");
+                ProximaPergunta(); // Avança para a próxima pergunta sem mover o peão
             }
             else
             {
-                player.MoverParaTras(1); //Move  player para tras
+                Debug.Log("O jogador retrocede 1 casa");
+                StartCoroutine(MoverJogador(-1));
             }
         }
+    }
 
-        //verifica se o jogo terminou
-        if(player.IndiceAtual() == casas.Length - 1)
+    IEnumerator MoverJogador(int passos)
+    {
+        player.Mover(passos);
+        yield return new WaitUntil(() => !player.IsMoving);
+
+        // Verifica se o jogo terminou
+        if (player.IndiceAtual() == casas.Length - 1)
         {
-            Debug.Log("Parabens você alcançou a última casa!");
-            painelPerguntas.SetActive(false); // esconde o painel
+            Debug.Log("Parabéns, você alcançou a última casa!");
+            painelPerguntas.SetActive(false); // Esconde o painel
         }
         else
         {
-            ProximaPergunta(); //carrega proxima pergunta
+            ProximaPergunta(); // Carrega a próxima pergunta
         }
     }
+
     void ProximaPergunta()
     {
-
-        //linha pronta não mexa nela
-        indicePergunta = (indicePergunta + 1) % perguntas.Length; //avança para a próxima pergunta
+        // Linha pronta, não mexa nela
+        indicePergunta = (indicePergunta + 1) % perguntas.Length; // Avança para a próxima pergunta
         ExibirPergunta();
     }
 }
