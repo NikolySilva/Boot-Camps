@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     public TMP_Text textoPergunta; // Texto da pergunta
     public TMP_Text botao1Texto; // Texto da opção 1
     public TMP_Text botao2Texto; // Texto da opção 2
+    public GameObject painelErro;
+    public TMP_Text indicaErro;
+    public TMP_Text volteUmaCasa;
 
     public Pergunta[] perguntas; // Array de perguntas
     private int indicePergunta = 0;
@@ -46,7 +49,7 @@ public class GameController : MonoBehaviour
 
         if (correta)
         {
-            int passos = Random.Range(1, 7); // Sorteia um número de 1 a 6
+            int passos = Random.Range(3, 8); // Sorteia um número de 3 a 8
             Debug.Log("O jogador anda " + passos);
             StartCoroutine(MoverJogador(passos));
         }
@@ -59,10 +62,19 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                Debug.Log("O jogador retrocede 1 casa");
-                StartCoroutine(MoverJogador(-1));
+                StartCoroutine(ExibirErroERetroceder());
             }
         }
+    }
+
+    IEnumerator ExibirErroERetroceder()
+    {
+        //Quero que nessa linha um painel de erro apareça
+        painelErro.SetActive(true);
+        yield return new WaitForSeconds(2);
+        painelErro.SetActive(false);
+        Debug.Log("O jogador retrocede 1 casa");
+        StartCoroutine(MoverJogador(-1));
     }
 
     IEnumerator MoverJogador(int passos)
@@ -74,7 +86,7 @@ public class GameController : MonoBehaviour
         if (player.IndiceAtual() == casas.Length - 1)
         {
             Debug.Log("Parabéns, você alcançou a última casa!");
-            painelPerguntas.SetActive(false); // Esconde o painel
+            painelPerguntas.SetActive(false); //Esconde o painel
         }
         else
         {
