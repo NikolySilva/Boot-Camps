@@ -14,7 +14,8 @@ Visual Studio
 
 
 ## Jogue Online
-Link para a página do jogo
+Link para a página do jogo(http://localhost:63960/)
+
 
 ## Autores do Projeto
 Nome do Aluno 1
