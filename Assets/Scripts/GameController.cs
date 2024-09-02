@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public Transform[] casas; // array das casas do tabuleiro
     public Player player; // Referência ao objeto Player
     public GameObject painelPerguntas; // Painel de perguntas
+    public GameObject painelFinalizou; // painel da linha de chegada
     public TMP_Text textoPergunta; // Texto da pergunta
     public TMP_Text botao1Texto; // Texto da opção 1
     public TMP_Text botao2Texto; // Texto da opção 2
@@ -86,6 +87,7 @@ public class GameController : MonoBehaviour
         if (player.IndiceAtual() == casas.Length - 1)
         {
             Debug.Log("Parabéns, você alcançou a última casa!");
+            painelFinalizou.SetActive(true);
             painelPerguntas.SetActive(false); //Esconde o painel
         }
         else
