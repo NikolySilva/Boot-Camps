@@ -12,22 +12,23 @@ public class GameController : MonoBehaviour
     public TMP_Text textoPergunta; // Texto da pergunta
     public TMP_Text botao1Texto; // Texto da opção 1
     public TMP_Text botao2Texto; // Texto da opção 2
-    public GameObject painelErro;
-    public TMP_Text indicaErro;
-    public TMP_Text volteUmaCasa;
+    public GameObject painelErro; //Painel de erro
+    public TMP_Text indicaErro; //texto de erro
+    public TMP_Text volteUmaCasa; //texto volte 1 casa
 
     public Pergunta[] perguntas; // Array de perguntas
     private int indicePergunta = 0;
 
     IEnumerator Start()
     {
+        //ativa opainel de perguntas após 2 segundo do incio do jogo
         yield return new WaitForSeconds(2);
         ExibirPergunta();
     }
 
     void ExibirPergunta()
     {
-        // Exibe o painel de perguntas com a pergunta atual
+        // Exibe o painel de perguntas com a pergunta e alternativas atuais
         painelPerguntas.SetActive(true);
         Pergunta perguntaAtual = perguntas[indicePergunta];
         textoPergunta.text = perguntaAtual.pergunta;
@@ -46,11 +47,12 @@ public class GameController : MonoBehaviour
 
     void VerificarResposta(bool correta)
     {
+        //desabilita o painel de perguntas
         painelPerguntas.SetActive(false);
 
         if (correta)
         {
-            int passos = Random.Range(3, 8); // Sorteia um número de 3 a 8
+            int passos = Random.Range(3, 7); // Sorteia um número de 3 a 6
             Debug.Log("O jogador anda " + passos);
             StartCoroutine(MoverJogador(passos));
         }
@@ -58,8 +60,10 @@ public class GameController : MonoBehaviour
         {
             if (player.IndiceAtual() == 0)
             {
+                //teste - Quero que exiba apenas que o jogador errou
+                StartCoroutine(ExibirErroERetroceder());
                 Debug.Log("Player está na posição inicial e não pode retroceder");
-                ProximaPergunta(); // Avança para a próxima pergunta sem mover o peão
+                
             }
             else
             {
@@ -70,12 +74,33 @@ public class GameController : MonoBehaviour
 
     IEnumerator ExibirErroERetroceder()
     {
-        //Quero que nessa linha um painel de erro apareça
-        painelErro.SetActive(true);
+        if (player.IndiceAtual() == 0)
+        {
+            painelErro.SetActive(true);
+            volteUmaCasa.gameObject.SetActive(false);
+        }
+        else
+        {
+            painelErro.SetActive(true);
+            volteUmaCasa.gameObject.SetActive(true);
+        }
         yield return new WaitForSeconds(2);
         painelErro.SetActive(false);
-        Debug.Log("O jogador retrocede 1 casa");
-        StartCoroutine(MoverJogador(-1));
+
+        if(player.IndiceAtual() != 0)
+        {
+            Debug.Log("O jogador retrocede 1 casa");
+            StartCoroutine(MoverJogador(-1));
+        }
+
+        ProximaPergunta(); // Avança para a próxima pergunta sem mover o peão
+
+        //Quero que nessa linha um painel de erro apareça
+        //painelErro.SetActive(true);
+        //yield return new WaitForSeconds(2);
+        //painelErro.SetActive(false);
+        //Debug.Log("O jogador retrocede 1 casa");
+        //StartCoroutine(MoverJogador(-1));
     }
 
     IEnumerator MoverJogador(int passos)
@@ -92,7 +117,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            ProximaPergunta(); // Carrega a próxima pergunta
+           ProximaPergunta(); // Carrega a próxima pergunta
         }
     }
 
