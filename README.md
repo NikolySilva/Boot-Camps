@@ -14,7 +14,7 @@ Visual Studio
 
 
 ## Jogue Online
-Link para a página do jogo(http://localhost:63960/)
+Link para a página do jogo(https://nikolysilva.github.io/Site-BootCamps/)
 
 
 ## Autores do Projeto
